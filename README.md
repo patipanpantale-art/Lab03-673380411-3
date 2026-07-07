@@ -5,7 +5,7 @@
 
 ---
 
-##  คำอธิบายโจทย์
+## คำอธิบายโจทย์
 
 บริษัทขนส่งแห่งหนึ่งมีรายการ **Shipment** หลายรายการ  
 ให้เขียนโปรแกรม Java คำนวณค่าขนส่งตามน้ำหนักและประเภท แล้วแสดงยอดรวม
@@ -75,6 +75,39 @@ Section 4 → ShipmentSection4_Exercise.java + ExpectedOutput_Section4.md
 
 ---
 
+### Step 3.5 — ⚠️ ลบไฟล์ Section อื่นที่ไม่ใช่ของตัวเองออก
+
+> **สำคัญมาก** — หลัง Fork แล้วให้ลบไฟล์ของ Section อื่นออกจาก repo ตัวเองด้วย  
+> เพื่อไม่ให้สับสน และป้องกันการส่งงานผิด Section
+
+**ตัวอย่าง: ถ้าได้รับมอบหมาย Section 2**
+
+```bash
+# ลบไฟล์ Section อื่นที่ไม่ใช่ของตัวเอง
+git rm ShipmentSection1_Exercise.java
+git rm ShipmentSection3_Exercise.java
+git rm ShipmentSection4_Exercise.java
+git rm ExpectedOutput_Section1.md
+git rm ExpectedOutput_Section3.md
+git rm ExpectedOutput_Section4.md
+
+# Commit การลบ
+git commit -m "remove: ลบ Section ที่ไม่ใช่ของตัวเองออก"
+git push origin main
+```
+
+> เก็บไว้เฉพาะไฟล์ของ Section ตัวเอง + README.md เท่านั้น
+
+**โครงสร้างที่ถูกต้องหลังลบ (ตัวอย่าง Section 2):**
+```
+java-shipment-exercise/
+├── ShipmentSection2_Exercise.java   ← เก็บไว้
+├── ExpectedOutput_Section2.md       ← เก็บไว้
+└── README.md                        ← เก็บไว้เสมอ
+```
+
+---
+
 ### Step 4 — แก้ Bug ตาม TODO
 
 แต่ละ Section มี Bug ที่ต่างกัน — แก้ตามลำดับ TODO ที่ระบุในไฟล์
@@ -137,6 +170,7 @@ git push origin main
 
 - [ ] Fork repo แล้ว
 - [ ] Clone ลงเครื่องแล้ว
+- [ ] ลบไฟล์ Section อื่นออกแล้ว (เหลือแค่ Section ของตัวเอง)
 - [ ] แก้ TODO ครบทุกจุด
 - [ ] `javac` ผ่าน ไม่มี error
 - [ ] `java` รันได้ ไม่มี Exception
